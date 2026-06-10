@@ -1,0 +1,13 @@
+Day 1 - Git Basics
+
+1. What is Git?
+Git is a version control system.
+
+2. What is GitHub?
+GitHub is a cloud platform to store Git repositories.
+
+Commands Learned:
+git init
+git status
+git add .
+git commit -m "Day 1 completed"
