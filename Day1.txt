@@ -1,13 +1,103 @@
-Day 1 - Git Basics
+Day 1 - Git & GitHub Basics
 
-1. What is Git?
-Git is a version control system.
+# What is Git?
 
-2. What is GitHub?
-GitHub is a cloud platform to store Git repositories.
+Git is a Distributed Version Control System (DVCS).
+It is used to track changes in files and source code.
 
-Commands Learned:
+# What is GitHub?
+
+GitHub is a cloud-based platform used to store and manage Git repositories online.
+
+# Practical Performed
+
+1. Created a GitHub account.
+2. Created a new repository named "harshu-gite".
+3. Connected EC2 instance with GitHub repository.
+4. Created Day1.txt file.
+5. Added file to Git staging area.
+6. Committed changes.
+7. Pushed code to GitHub.
+
+# Commands Learned
+
+1. git init
+
+Purpose:
+Initialize a new Git repository.
+
+Command:
 git init
+
+2. git status
+
+Purpose:
+Shows the current status of files in the repository.
+
+Command:
 git status
+
+3. git add .
+
+Purpose:
+Adds all files to the staging area.
+
+Command:
 git add .
-git commit -m "Day 1 completed"
+
+4. git commit -m "message"
+
+Purpose:
+Creates a snapshot of staged changes.
+
+Command:
+git commit -m "Added Day1 Git Notes"
+
+5. git remote add origin <repository-url>
+
+Purpose:
+Connects local repository to GitHub repository.
+
+Example:
+git remote add origin https://github.com/Harshal-gite/harshu-gite.git
+
+6. git branch -M main
+
+Purpose:
+Renames the current branch to main.
+
+Command:
+git branch -M main
+
+7. git push -u origin main
+
+Purpose:
+Uploads local commits to GitHub.
+
+Command:
+git push -u origin main
+
+# Git Workflow
+
+Create File
+↓
+git status
+↓
+git add .
+↓
+git commit -m "message"
+↓
+git push
+↓
+GitHub
+
+# Key Learning
+
+Git tracks file changes locally.
+GitHub stores repositories online.
+git add moves files to staging area.
+git commit creates a snapshot.
+git push uploads changes to GitHub.
+
+Day 1 Completed Successfully.
+
