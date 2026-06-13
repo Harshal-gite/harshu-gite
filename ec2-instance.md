@@ -1,22 +1,20 @@
+# 🚀 AWS Cloud Infrastructure Tasks
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![DevOps](https://img.shields.io/badge/DevOps-blue?style=for-the-badge)
+## 📌  How to Launch an AWS EC2 Instance
+# Hi Harshu Gite !
 ---
-# How to Launch an EC2 Instance
----
+### 🛠️ Step-by-Step Deployment Guide
 
----
-* 1. Login to AWS Console.
-* 2. Open EC2 Service.
-* 3. Click "Launch Instance".
-* 4. Enter Instance Name.
-* 5. Select AMI.
-* 6. Choose Instance Type.
-* 7. Create/Select Key Pair.
-* 8. Configure Security Group.
-* 9. Review Settings.
-* 10. Click "Launch Instance".
-* 11. Wait for Running State.
-* 12. Connect using SSH.
+| Step Number | Action Details | AWS Console Location |
+| :--- | :--- | :--- |
+| **Step 1** | Open AWS Console & Search EC2 | Global Dashboard |
+| **Step 2** | Click on **Launch Instance** | EC2 Resources Section |
+| **Step 3** | Choose **Ubuntu Server 24.04 LTS** | Application & OS Images (AMI) |
+| **Step 4** | Select Instance Type: **t2.micro** | Instance Type Dropdown |
+| **Step 5** | Create/Select **Key Pair (.pem)** | Security Credentials |
+| **Step 6** | Allow HTTP (80) & HTTPS (443) | Network Settings (Firewall) |
 
-## Note:
----
-### EC2 (Elastic Compute Cloud) is an AWS service used to create virtual servers in the cloud.
 ---
