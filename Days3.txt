@@ -1,0 +1,266 @@
+Complete Git & GitHub Practical (Ubuntu) — Step by Step
+
+Follow every step in order. Do not skip any step.
+
+Step 1 — Update Ubuntu
+sudo apt update
+sudo apt upgrade -y
+
+Wait until the update finishes.
+
+Step 2 — Install Git
+sudo apt install git -y
+
+Verify installation:
+
+git --version
+
+Example output:
+
+git version 2.x.x
+Step 3 — Configure Git Identity
+
+Replace with your own name and email.
+
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+
+Verify:
+
+git config --list
+
+You should see:
+
+user.name=Your Name
+user.email=your_email@example.com
+Step 4 — Create Project Directory
+
+Go to Home directory:
+
+cd ~
+
+Create project:
+
+mkdir linux-notes
+
+Enter project:
+
+cd linux-notes
+
+Verify location:
+
+pwd
+Step 5 — Initialize Git Repository
+git init
+
+Expected output:
+
+Initialized empty Git repository
+
+Check status:
+
+git status
+Step 6 — Create README File
+echo "# Linux Notes" > README.md
+
+Verify:
+
+cat README.md
+
+Output:
+
+# Linux Notes
+Step 7 — Check Repository Status
+git status
+
+You should see:
+
+Untracked files:
+README.md
+Step 8 — Stage File
+git add README.md
+
+Verify:
+
+git status
+
+You should see:
+
+Changes to be committed
+Step 9 — Create First Commit
+git commit -m "Initial commit"
+
+Verify commit:
+
+git log --oneline
+
+Example:
+
+a1b2c3d Initial commit
+Step 10 — Create GitHub Repository
+
+Go to:
+
+GitHub
+
+Create a repository:
+
+Click New Repository
+Repository Name: linux-notes
+Visibility: Public
+Do NOT initialize README
+Click Create Repository
+Step 11 — Copy Repository URL
+
+Example:
+
+https://github.com/YOUR_USERNAME/linux-notes.git
+
+Copy your own URL.
+
+Step 12 — Add Remote Repository
+
+Replace URL with yours.
+
+git remote add origin https://github.com/YOUR_USERNAME/linux-notes.git
+
+Verify:
+
+git remote -v
+
+Expected:
+
+origin  https://github.com/YOUR_USERNAME/linux-notes.git
+origin  https://github.com/YOUR_USERNAME/linux-notes.git
+Step 13 — Rename Branch to Main
+git branch -M main
+
+Verify:
+
+git branch
+
+Output:
+
+* main
+Step 14 — Push Repository to GitHub
+git push -u origin main
+
+If authentication appears:
+
+Username = GitHub username
+Password = Personal Access Token (PAT)
+
+After success:
+
+Branch 'main' set up to track 'origin/main'
+Step 15 — Verify on GitHub
+
+Refresh repository page.
+
+You should see:
+
+README.md
+Step 16 — Modify README
+
+Append new content:
+
+echo "Linux Commands Section" >> README.md
+
+View file:
+
+cat README.md
+
+Output:
+
+# Linux Notes
+Linux Commands Section
+Step 17 — Check Changes
+git status
+
+You should see:
+
+modified: README.md
+Step 18 — View Difference
+git diff
+
+This shows exactly what changed.
+
+Step 19 — Stage Changes
+git add .
+
+Verify:
+
+git status
+Step 20 — Commit Changes
+git commit -m "Added Linux commands section"
+Step 21 — Push Changes
+git push
+
+Refresh GitHub.
+
+New content should appear.
+
+Step 22 — Create New Branch
+git checkout -b networking-notes
+
+Verify:
+
+git branch
+
+Output:
+
+main
+* networking-notes
+Step 23 — Add Networking Content
+echo "Networking Fundamentals" >> README.md
+
+Verify:
+
+cat README.md
+Step 24 — Commit on Branch
+git add .
+git commit -m "Added networking notes"
+Step 25 — Switch Back to Main
+git checkout main
+
+Verify:
+
+git branch
+Step 26 — Merge Branch
+git merge networking-notes
+Step 27 — Push Merged Changes
+git push
+Step 28 — View Commit History
+git log --oneline --graph
+Step 29 — Clone Repository
+
+Move outside project:
+
+cd ..
+
+Clone repository:
+
+git clone https://github.com/YOUR_USERNAME/linux-notes.git
+
+Verify:
+
+ls
+
+You should see:
+
+linux-notes
+Daily Git Workflow
+
+Whenever you make changes:
+
+cd ~/linux-notes
+
+git status
+
+git add .
+
+git commit -m "Describe your changes"
+
+git push
+
+These commands cover the core workflow used by most developers: initialize, stage, commit, push, branch, merge, pull, and clone.
