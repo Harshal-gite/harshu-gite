@@ -360,3 +360,33 @@ Status : Never Stop Learning
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00F7FF,100:0047AB&height=180&section=footer"/>
 
 </div>
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: Harshal-gite
+          outputs: |
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          <p align="center">
+<img src="https://raw.githubusercontent.com/Harshal-gite/Harshu-gite/output/github-contribution-grid-snake-dark.svg" />
+</p>
